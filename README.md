@@ -26,14 +26,20 @@ Initial system environment: Ubuntu X86 22.04, CUDA 12, Python 3.10, Torch 2.6
 The follower arm uses 6x STS3215 motors with 1/345 gearing. 
 The leader arm uses three differently geared motors to ensure it can sustain its own weight and move without requiring much force. 
 Leader arm calibrated and operated using 5V power supply, follower arm using 12V power supply.
+
 **Setup**
+
 Each motor is identified by a unique id on the bus. For communication to work properly between the motors and the controller, each motor needs to be set with a unique ID. 
 Additionally, the speed at which data is transmitted on the bus is determined by the baudrate, so the controller and all the motors need to be configured with the same baudrate.
+
 **Calibration**
+
 Calibration ensures that the leader and follower arms have the same position values when they are in the same physical position. This allows a neural network trained on one robot to work on another.
 
 After running a calibration command, move the arm that's being calibrated across its full range of motion. Do this for both arms.
+
 **Teleoperation**
+
 If calibrated correctly, the teleoperation command should allow the follower arm to be teleoperated by the leader arm. 
 It will also identify any missing calibrations and, if identified, initiate the calibration procedure.
 

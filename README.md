@@ -23,6 +23,7 @@ Collaborators: Ethan Chen, Kieu Vi O'Brien, Ayyazul Hassan
 https://huggingface.co/docs/lerobot/so101
 <br><br>
 Initial system environment: Ubuntu X86 22.04, CUDA 12, Python 3.10, Torch 2.6
+
 The follower arm uses 6x STS3215 motors with 1/345 gearing. 
 The leader arm uses three differently geared motors to ensure it can sustain its own weight and move without requiring much force. 
 Leader arm calibrated and operated using 5V power supply, follower arm using 12V power supply.

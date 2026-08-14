@@ -46,7 +46,9 @@ After running a calibration command, move the arm that's being calibrated across
 
 If calibrated correctly, the teleoperation command should allow the follower arm to be teleoperated by the leader arm. 
 It will also identify any missing calibrations and, if identified, initiate the calibration procedure.
-
+<br><br>
+<img width="576" height="768" alt="image" src="https://github.com/user-attachments/assets/1310692a-698a-4e27-abc7-53859a90cc03" />
+<br><br>
 
 # Dual Camera Perception System
 We used two cameras for training: a stationary one on the front of the rover, and a camera mounted onto the arm.

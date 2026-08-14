@@ -37,24 +37,37 @@ Additionally, the speed at which data is transmitted on the bus is determined by
 
 Calibration ensures that the leader and follower arms have the same position values when they are in the same physical position. This allows a neural network trained on one robot to work on another.
 
-After running a calibration command, move the arm that's being calibrated across its full range of motion. Do this for both arms.
+After running a calibration command, move the arm that's being calibrated across its full range of motion. This was done for both arms.
+<br><br>
+<img width="1031" height="353" alt="image" src="https://github.com/user-attachments/assets/16b01508-dbe2-445b-b360-371ec7810695" />
+<br><br>
 
 **Teleoperation**
 
 If calibrated correctly, the teleoperation command should allow the follower arm to be teleoperated by the leader arm. 
 It will also identify any missing calibrations and, if identified, initiate the calibration procedure.
 
+
 # Dual Camera Perception System
 We used two cameras for training: a stationary one on the front of the rover, and a camera mounted onto the arm.
 The idea was to allow the ACT model to use two reference frames to train the robotic arm, one being the perspective of the arm itself, and one being a ground observer.
 This way, we could prevent the arm from moving erratically.
-<insert image here>
+<br><br>
+<img width="1170" height="847" alt="image" src="https://github.com/user-attachments/assets/a8a5196c-067e-4db2-a0ab-6b9cd7954756" />
+<br><br>
 
 # ROS2 Camera Pipeline
 Since we were using a separate mini-PC for computation and didn't have a monitor, we weren't able to directly display the camera feed during teleoperation, which was a problem.
 So we opted to use a ROS2 pipeline over a custom local network.
-<insert image here>
+<br><br>
+<img width="1170" height="919" alt="image" src="https://github.com/user-attachments/assets/9212934a-56ef-4900-ac23-29cf7324a1ba" />
+<img width="759" height="730" alt="image" src="https://github.com/user-attachments/assets/03ab2d68-ff9a-4247-9938-0bdd71f47099" />
+<br><br>
 
 # ACT Model via Hugging Face Framework
 We recorded 50+ episodes and uploaded to the Hugging Face Repository. The ACT algorithm used 300K+ steps to train the model.
+<br><br>
+<img width="1354" height="671" alt="image" src="https://github.com/user-attachments/assets/387cbfbe-e054-4ea8-b0d7-e7c7746a2887" />
+<img width="1136" height="566" alt="image" src="https://github.com/user-attachments/assets/33b43d5d-748a-423c-b960-39b3f7ab7e42" />
+
 
